@@ -163,7 +163,7 @@ function finalizar(){
   let msg = 'Olá! Quero pedir:%0A';
   let total=0;
   for(let i in carrinho){ msg += `- ${carrinho[i]}x ${cardapio[i].nome} - R$ ${cardapio[i].preco},00%0A`; total += cardapio[i].preco * carrinho[i]; }
-  msg += `%0ATotal: R$ ${total},00%0A%0AQual forma de pagamento? Pix ou dinheiro?`;
+  msg += `%0ATotal: R$ ${total},00`;
   window.open('https://wa.me/5541996187621?text='+msg, '_blank');
 }
 mostrar();
