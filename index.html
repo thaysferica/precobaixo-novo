@@ -1,120 +1,172 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pizza Preço Baixo - Piraquara</title>
+<title>Pizza Preço Baixo - Peça Aqui</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-body{background:#FFF8E7;color:#222}
-header{background:#D32F2F;color:#fff;text-align:center;padding:20px 15px}
-header h1{font-size:32px;line-height:1}
-header h1 span{color:#FFEB3B}
-header p{margin-top:8px;font-weight:bold}
-.badge{background:#FFEB3B;color:#D32F2F;display:inline-block;padding:6px 12px;border-radius:20px;margin-top:10px;font-weight:bold}
-.info{background:#fff;padding:15px;text-align:center;border-bottom:3px solid #D32F2F}
-.info b{color:#D32F2F}
-section{padding:15px}
-h2{font-size:24px;margin:20px 0 10px;text-align:center}
-.verde{color:#2E7D32}.vermelho{color:#D32F2F}.azul{color:#1565C0}.roxo{color:#6A1B9A}
-.card{background:#fff;border-radius:12px;padding:14px;margin-bottom:12px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
-.card h3{font-size:18px}
-.card p{font-size:13px;color:#555;margin:5px 0 10px}
-.preco{font-size:20px;font-weight:bold;color:#2E7D32}
-.btn{display:block;background:#25D366;color:#fff;text-align:center;padding:12px;border-radius:10px;text-decoration:none;font-weight:bold;margin-top:10px}
-footer{background:#222;color:#fff;text-align:center;padding:20px;font-size:13px}
+  *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+  body{background:#f6f6f6;padding-bottom:90px}
+  .topo{background:white;text-align:center;padding:15px 10px 5px}
+  .topo img{max-width:230px;width:90%}
+  .faixa{background:#1a9e4b;color:white;margin:12px;padding:14px;border-radius:14px;display:flex;justify-content:space-between;align-items:center;font-weight:bold;font-size:18px}
+  .faixa a{background:#25D366;color:white;text-decoration:none;padding:8px 12px;border-radius:20px;font-size:14px}
+  .filtros{display:flex;gap:8px;padding:0 12px;overflow-x:auto}
+  .filtros button{border:2px solid #1a9e4b;background:white;color:#1a9e4b;padding:10px 18px;border-radius:20px;font-weight:bold;font-size:16px;white-space:nowrap;cursor:pointer}
+  .filtros button.ativo{background:#d92b2b;border-color:#d92b2b;color:white}
+  .titulo{padding:18px 14px 8px;font-size:20px;font-weight:bold}
+  .titulo span{color:#666;font-size:13px;display:block;font-weight:normal}
+  .card{background:white;margin:0 12px 12px;border-radius:14px;padding:12px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 6px rgba(0,0,0,0.08)}
+  .card b{font-size:16px}
+  .card .preco{color:#1a9e4b;font-size:18px;font-weight:bold;margin:4px 0}
+  .qtd{display:flex;align-items:center;gap:8px;margin-top:6px}
+  .qtd button{width:30px;height:30px;border-radius:50%;border:none;font-size:18px;font-weight:bold;cursor:pointer;color:white}
+  .menos{background:#d92b2b}
+  .mais{background:#1a9e4b}
+  .add{background:#1a9e4b;color:white;border:none;padding:9px 14px;border-radius:8px;font-weight:bold;cursor:pointer}
+  .carrinho{position:fixed;bottom:0;left:0;right:0;background:white;padding:12px;border-top:2px solid #eee;display:flex;justify-content:space-between;align-items:center}
+  .carrinho b{font-size:17px}
+  .carrinho button{background:#1a9e4b;color:white;border:none;padding:12px 18px;border-radius:10px;font-weight:bold;font-size:15px;cursor:pointer}
+  .escondido{display:none}
 </style>
 </head>
 <body>
-<header>
-<h1>Pizza <span>Preço Baixo</span></h1>
-<p>Pizza Grande - 8 Fatias - Todos os dias!</p>
-<div class="badge">TEMOS BORDA RECHEADA</div>
-</header>
-<div class="info">
-📞 3798-9517 | 3798-9483<br>
-📱 WhatsApp: <b>41 99618-7621</b><br>
-📍 Vila Juliana - Piraquara<br>
-⚠️ Em todas as pizzas meio a meio será acrescentado R$5,00<br>
-🥤 Temos refrigerantes 2 litros: Coca-Cola, Fanta Laranja, Guaraná e outros sabores<br>
-* Sujeito a alteração de valores
+
+<div class="topo">
+  <!-- TROQUE O LINK ABAIXO PELA LOGO DELES -->
+  <img src="https://i.imgur.com/logo-exemplo.png" alt="Pizza Preço Baixo">
+  <p style="color:#666;margin:6px">Peça aqui, rapidinho!</p>
 </div>
 
-<section>
-<h2 class="verde">Pizza R$ 18,00</h2>
-<div class="card"><h3>Alho e Óleo</h3><p>Molho, mussarela, alho, óleo e orégano</p><div class="preco">R$ 18,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Alho%20e%20Óleo%20R$18">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Catupalha</h3><p>Molho, mussarela, catupiry, batata palha e orégano</p><div class="preco">R$ 18,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Catupalha%20R$18">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Humita</h3><p>Molho, mussarela, milho, ervilha e orégano</p><div class="preco">R$ 18,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Humita%20R$18">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Milho</h3><p>Molho, mussarela, milho e orégano</p><div class="preco">R$ 18,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Milho%20R$18">Pedir no WhatsApp</a></div>
+<div class="faixa">
+  Peça aqui, rapidinho! 🍕
+  <a href="https://wa.me/5541996187621" target="_blank">WhatsApp</a>
+</div>
 
-<h2 class="vermelho">Pizza R$ 25,00 - Salgadas</h2>
-<div class="card"><h3>3 Queijos</h3><p>Molho, mussarela, catupiry, parmesão e orégano</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%203%20Queijos%20R$25">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Bacon</h3><p>Molho, mussarela, bacon e orégano</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Bacon%20R$25">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Bacon Cheddar</h3><p>Molho, mussarela, bacon, cheddar e orégano</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Bacon%20Cheddar%20R$25">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Bacon Milho</h3><p>Molho, mussarela, bacon, milho e orégano</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Bacon%20Milho%20R$25">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Caipira</h3><p>Molho, mussarela, frango, milho e orégano</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Caipira%20R$25">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Calabresa</h3><p>Molho, mussarela, calabresa e orégano</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Calabresa%20R$25">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Frango</h3><p>Molho, mussarela, frango e orégano</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Frango%20R$25">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Frango Catupiry</h3><p>Molho, mussarela, frango, catupiry e orégano</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Frango%20Catupiry%20R$25">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Frango Cheddar</h3><p>Molho, mussarela, frango, cheddar e orégano</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Frango%20Cheddar%20R$25">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Frango Crocante</h3><p>Molho, mussarela, frango, batata palha e orégano</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Frango%20Crocante%20R$25">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Lombo</h3><p>Molho, mussarela, lombo e orégano</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Lombo%20R$25">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Lombo Catupiry</h3><p>Molho, mussarela, lombo, catupiry e orégano</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Lombo%20Catupiry%20R$25">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Lombo Cheddar</h3><p>Molho, mussarela, lombo, cheddar e orégano</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Lombo%20Cheddar%20R$25">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Mussarela</h3><p>Molho, mussarela e orégano</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Mussarela%20R$25">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Marguerita</h3><p>Molho, mussarela, tomate, manjericão e orégano</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Marguerita%20R$25">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Romana</h3><p>Molho, mussarela, presunto, tomate e orégano</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Romana%20R$25">Pedir no WhatsApp</a></div>
+<div class="filtros">
+  <button class="ativo" onclick="filtrar('todos',this)">Todos</button>
+  <button onclick="filtrar('18',this)">R$ 18</button>
+  <button onclick="filtrar('25',this)">R$ 25</button>
+  <button onclick="filtrar('35',this)">R$ 35</button>
+  <button onclick="filtrar('55',this)">R$ 55</button>
+</div>
 
-<h2 class="roxo">Pizza Doce R$ 25,00</h2>
-<div class="card"><h3>Brigadeiro</h3><p>Chocolate, granulado e leite condensado</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Brigadeiro%20R$25">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Chocolate Branco</h3><p>Chocolate branco e leite condensado</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Chocolate%20Branco%20R$25">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Chocolate Preto</h3><p>Chocolate preto e leite condensado</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Chocolate%20Preto%20R$25">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Dois Amores</h3><p>Chocolate preto e chocolate branco</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Dois%20Amores%20R$25">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Beijinho</h3><p>Beijinho de coco</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Beijinho%20R$25">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Prestígio</h3><p>Chocolate preto e coco</p><div class="preco">R$ 25,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Prestígio%20R$25">Pedir no WhatsApp</a></div>
+<div id="lista"></div>
 
-<h2 class="azul">Pizza R$ 35,00 - Salgadas</h2>
-<div class="card"><h3>4 Queijos</h3><p>Molho, mussarela, provolone, parmesão ralado, catupiry e orégano</p><div class="preco">R$ 35,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%204%20Queijos%20R$35">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Barcelona</h3><p>Molho, mussarela, frango, tomate picado, catupiry e orégano</p><div class="preco">R$ 35,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Barcelona%20R$35">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Brócolis</h3><p>Molho, mussarela, brócolis e orégano</p><div class="preco">R$ 35,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Brócolis%20R$35">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Brócolis com Bacon</h3><p>Molho, mussarela, brócolis, bacon e orégano</p><div class="preco">R$ 35,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Brócolis%20com%20Bacon%20R$35">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Calabresa Acebolada</h3><p>Molho, mussarela, calabresa, cebola e orégano</p><div class="preco">R$ 35,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Calabresa%20Acebolada%20R$35">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Champignon Especial</h3><p>Molho, mussarela, champignon, tomate temperado, bacon, azeitonas e orégano</p><div class="preco">R$ 35,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Champignon%20Especial%20R$35">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Escarola com Bacon</h3><p>Molho, mussarela, escarola, bacon e orégano</p><div class="preco">R$ 35,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Escarola%20com%20Bacon%20R$35">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Especial do Pizzaiolo</h3><p>Molho, mussarela, creme de milho, bacon, ervilha e orégano</p><div class="preco">R$ 35,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Especial%20do%20Pizzaiolo%20R$35">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Frango Cremoso</h3><p>Molho, mussarela, frango, creme de milho cremoso e orégano</p><div class="preco">R$ 35,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Frango%20Cremoso%20R$35">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Frango Especial</h3><p>Molho, mussarela, frango, milho picado, palmito e orégano</p><div class="preco">R$ 35,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Frango%20Especial%20R$35">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Pizza do Lala</h3><p>Molho, mussarela, frango, champignon, ovos e orégano</p><div class="preco">R$ 35,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Pizza%20do%20Lala%20R$35">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Portuguesa</h3><p>Molho, mussarela, presunto, cebola, ovos, azeitonas e orégano</p><div class="preco">R$ 35,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Portuguesa%20R$35">Pedir no WhatsApp</a></div>
+<div class="carrinho">
+  <div><span id="itens">0 itens</span><br><b id="total">Total: R$ 0,00</b></div>
+  <button onclick="finalizar()">Finalizar Pedido</button>
+</div>
 
-<h2 class="roxo">Pizza Doce R$ 35,00</h2>
-<div class="card"><h3>Banana com Canela</h3><p>Banana, canela e leite condensado</p><div class="preco">R$ 35,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Banana%20com%20Canela%20R$35">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Confetes</h3><p>Chocolate preto, confetes e leite condensado</p><div class="preco">R$ 35,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Confetes%20R$35">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Sedução</h3><p>Chocolate branco, morango, suspiro e leite condensado</p><div class="preco">R$ 35,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Sedução%20R$35">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Sensação</h3><p>Chocolate preto, morango, suspiro e leite condensado</p><div class="preco">R$ 35,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Sensação%20R$35">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Sonho de Valsa</h3><p>Chocolate preto, bombom sonho de valsa e leite condensado</p><div class="preco">R$ 35,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Sonho%20de%20Valsa%20R$35">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Banana Nevada</h3><p>Banana, chocolate branco e leite condensado</p><div class="preco">R$ 35,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Banana%20Nevada%20R$35">Pedir no WhatsApp</a></div>
+<script>
+const cardapio = [
+  {cat:"18", nome:"Alho e óleo", preco:18},
+  {cat:"18", nome:"Catupalha", preco:18},
+  {cat:"18", nome:"Humita", preco:18},
+  {cat:"18", nome:"Milho", preco:18},
+  {cat:"25", nome:"3 Queijos", preco:25},
+  {cat:"25", nome:"Bacon", preco:25},
+  {cat:"25", nome:"Bacon cheddar", preco:25},
+  {cat:"25", nome:"Bacon milho", preco:25},
+  {cat:"25", nome:"Caipira", preco:25},
+  {cat:"25", nome:"Calabresa", preco:25},
+  {cat:"25", nome:"Frango", preco:25},
+  {cat:"25", nome:"Frango catupiry", preco:25},
+  {cat:"25", nome:"Frango cheddar", preco:25},
+  {cat:"25", nome:"Frango crocante", preco:25},
+  {cat:"25", nome:"Lombo catupiry", preco:25},
+  {cat:"25", nome:"Lombo cheddar", preco:25},
+  {cat:"25", nome:"Lombo", preco:25},
+  {cat:"25", nome:"Mussarela", preco:25},
+  {cat:"25", nome:"Marguerita", preco:25},
+  {cat:"25", nome:"Romana", preco:25},
+  {cat:"25", nome:"Brigadeiro (doce)", preco:25},
+  {cat:"25", nome:"Chocolate branco (doce)", preco:25},
+  {cat:"25", nome:"Chocolate preto (doce)", preco:25},
+  {cat:"25", nome:"Dois amores (doce)", preco:25},
+  {cat:"25", nome:"Beijinho (doce)", preco:25},
+  {cat:"25", nome:"Prestígio (doce)", preco:25},
+  {cat:"35", nome:"4 Queijos", preco:35},
+  {cat:"35", nome:"Barcelona", preco:35},
+  {cat:"35", nome:"Brócolis", preco:35},
+  {cat:"35", nome:"Brócolis com bacon", preco:35},
+  {cat:"35", nome:"Calabresa acebolada", preco:35},
+  {cat:"35", nome:"Champignon especial", preco:35},
+  {cat:"35", nome:"Escarola com bacon", preco:35},
+  {cat:"35", nome:"Especial do pizzaiolo", preco:35},
+  {cat:"35", nome:"Frango cremoso", preco:35},
+  {cat:"35", nome:"Frango especial", preco:35},
+  {cat:"35", nome:"Pizza do Lalá", preco:35},
+  {cat:"35", nome:"Portuguesa", preco:35},
+  {cat:"35", nome:"Banana com canela (doce)", preco:35},
+  {cat:"35", nome:"Confetes (doce)", preco:35},
+  {cat:"35", nome:"Sedução (doce)", preco:35},
+  {cat:"35", nome:"Sensação (doce)", preco:35},
+  {cat:"35", nome:"Sonho de valsa (doce)", preco:35},
+  {cat:"35", nome:"Banana nevada (doce)", preco:35},
+  {cat:"55", nome:"Carnívora", preco:55},
+  {cat:"55", nome:"Da casa", preco:55},
+  {cat:"55", nome:"Da vovó", preco:55},
+  {cat:"55", nome:"Do forneiro (doce)", preco:55},
+  {cat:"55", nome:"Leão", preco:55},
+  {cat:"55", nome:"Mignon", preco:55},
+  {cat:"55", nome:"Mignon a 4 queijos", preco:55},
+  {cat:"55", nome:"Mignon acebolado", preco:55},
+  {cat:"55", nome:"Mignon alho e óleo", preco:55},
+  {cat:"55", nome:"Mignon cheddar", preco:55},
+  {cat:"55", nome:"Mignon com brócolis", preco:55},
+  {cat:"55", nome:"Strogonoff de carne", preco:55},
+  {cat:"55", nome:"Welliton", preco:55},
+];
 
-<h2 class="vermelho">Pizza R$ 55,00 - Especiais</h2>
-<div class="card"><h3>Carnívora</h3><p>Molho, mussarela, calabresa, bacon, lombo, presunto e orégano</p><div class="preco">R$ 55,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Carnívora%20R$55">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Da Casa</h3><p>Molho, mussarela, bacon, lombo, calabresa, catupiry e orégano</p><div class="preco">R$ 55,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Da%20Casa%20R$55">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Da Vovó</h3><p>Molho, mussarela, frango, catupiry, tomate, bacon e orégano</p><div class="preco">R$ 55,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Da%20Vovó%20R$55">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Do Forneiro</h3><p>Molho, mussarela, frango, bacon, tomate, catupiry e orégano</p><div class="preco">R$ 55,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Do%20Forneiro%20R$55">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Leão</h3><p>Molho, mussarela, calabresa, bacon, lombo, tomate, cheddar e orégano</p><div class="preco">R$ 55,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Leão%20R$55">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Mignon</h3><p>Molho, mussarela, mignon e orégano</p><div class="preco">R$ 55,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Mignon%20R$55">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Mignon a 4 Queijos</h3><p>Molho, mussarela, mignon e 4 queijos</p><div class="preco">R$ 55,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Mignon%20a%204%20Queijos%20R$55">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Mignon Acebolado</h3><p>Molho, mussarela, mignon, cebola e orégano</p><div class="preco">R$ 55,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Mignon%20Acebolado%20R$55">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Mignon Alho e Óleo</h3><p>Molho, mussarela, mignon, alho, óleo e orégano</p><div class="preco">R$ 55,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Mignon%20Alho%20e%20Óleo%20R$55">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Mignon Cheddar</h3><p>Molho, mussarela, mignon, cheddar e orégano</p><div class="preco">R$ 55,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Mignon%20Cheddar%20R$55">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Mignon com Brócolis</h3><p>Molho, mussarela, mignon, brócolis e orégano</p><div class="preco">R$ 55,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Mignon%20com%20Brócolis%20R$55">Pedir no WhatsApp</a></div>
-<div class="card"><h3>Strogonoff de Carne</h3><p>Molho, mussarela, strogonoff de carne e orégano</p><div class="preco">R$ 55,00</div><a class="btn" href="https://wa.me/5541996187621?text=Quero%20Strogonoff%20de%20Carne%20R$55">Pedir no WhatsApp</a></div>
+let carrinho = {};
+let filtroAtual = 'todos';
 
-</section>
-<footer>
-Pizza Preço Baixo - Piraquara<br>
-@pizzapreco_baixo<br>
-* Sujeito a alteração de valores
-</footer>
+function mostrar(){
+  const lista = document.getElementById('lista');
+  lista.innerHTML = '';
+  cardapio.forEach((p, i) => {
+    if(filtroAtual !== 'todos' && p.cat !== filtroAtual) return;
+    const q = carrinho[i] || 0;
+    lista.innerHTML += `
+    <div class="card">
+      <div><b>${p.nome}</b><div class="preco">R$ ${p.preco},00</div>
+        <div class="qtd">
+          <button class="menos" onclick="mudar(${i},-1)">-</button>
+          <span>${q}</span>
+          <button class="mais" onclick="mudar(${i},1)">+</button>
+        </div>
+      </div>
+      <button class="add" onclick="mudar(${i},1)">Adicionar +</button>
+    </div>`;
+  });
+}
+function mudar(i, v){
+  carrinho[i] = Math.max(0, (carrinho[i]||0)+v);
+  if(carrinho[i]==0) delete carrinho[i];
+  mostrar(); atualizarTotal();
+}
+function atualizarTotal(){
+  let total=0, itens=0;
+  for(let i in carrinho){ total += cardapio[i].preco * carrinho[i]; itens += carrinho[i]; }
+  document.getElementById('total').innerText = 'Total: R$ ' + total.toFixed(2).replace('.',',');
+  document.getElementById('itens').innerText = itens + ' itens';
+}
+function filtrar(cat, btn){
+  filtroAtual = cat;
+  document.querySelectorAll('.filtros button').forEach(b=>b.classList.remove('ativo'));
+  btn.classList.add('ativo');
+  mostrar();
+}
+function finalizar(){
+  if(Object.keys(carrinho).length==0){ alert('Escolha pelo menos 1 pizza!'); return; }
+  let msg = 'Olá! Quero pedir:%0A';
+  let total=0;
+  for(let i in carrinho){ msg += `- ${carrinho[i]}x ${cardapio[i].nome} - R$ ${cardapio[i].preco},00%0A`; total += cardapio[i].preco * carrinho[i]; }
+  msg += `%0ATotal: R$ ${total},00%0A%0AQual forma de pagamento? Pix ou dinheiro?`;
+  window.open('https://wa.me/5541996187621?text='+msg, '_blank');
+}
+mostrar();
+</script>
 </body>
 </html>
